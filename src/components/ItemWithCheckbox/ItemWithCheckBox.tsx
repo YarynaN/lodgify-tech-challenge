@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Box, Checkbox, FormControlLabel } from '@mui/material';
-import { Task } from '../../context/ProfileCreationProgressContext/ProfileCreationProgressProvider';
+import { Task } from '../../models/CreateProfile/GroupedTasks';
 
 type TaskProgressProps = {
 	updateTask: (task: Task, value: boolean) => void;

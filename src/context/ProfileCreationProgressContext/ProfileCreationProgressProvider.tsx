@@ -5,18 +5,8 @@ import React, {
 	useState,
 } from 'react';
 import { fetchGroupsRequest } from './requests';
-import { getCurrentProgress } from '../utils/utils';
-
-export type Task = {
-	description: string;
-	value: number;
-	checked: boolean;
-};
-
-export type Group = {
-	name: string;
-	tasks: Task[];
-};
+import { getCurrentProgress } from '../../models/CreateProfile/calculateProgressUtil';
+import { Group, Task } from '../../models/CreateProfile/GroupedTasks';
 
 export type TasksContextType = {
 	items: Group[];

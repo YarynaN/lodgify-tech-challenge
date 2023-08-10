@@ -13,10 +13,7 @@ import {
 	LiaClipboardCheckSolid,
 	LiaAngleDownSolid,
 } from 'react-icons/lia';
-import {
-	Group,
-	Task,
-} from '../../context/ProfileCreationProgressContext/ProfileCreationProgressProvider';
+import { Group, Task } from '../../models/CreateProfile/GroupedTasks';
 
 type AccordionProps = {
 	group: Group;

@@ -1,4 +1,4 @@
-import { Group } from '../ProfileCreationProgressContext/ProfileCreationProgressProvider';
+import { Group } from './GroupedTasks';
 
 const getTotalTasksValue = (groups: Group[]): number =>
 	groups.reduce((acc, curr) => {
