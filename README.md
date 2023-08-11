@@ -2,6 +2,11 @@
 # This Project was bootstarpped using [CRA](https://github.com/facebook/create-react-app). 
 Dear reviewer, leaving this default section for your convenience.
 
+In general this is a simple SPA projects, which serves the widget component based on mockups.
+You can find that styles are `MUI (Material UI)` based with theme adjusted for mockup palette.
+I have also added basic unit tests and UI tests for components and calculations.
+As for global state management I have used `React Context`.
+
 ## Available Scripts
 In the project directory, you can run:
 
