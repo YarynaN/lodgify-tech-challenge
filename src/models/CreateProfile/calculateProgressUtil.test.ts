@@ -1,4 +1,4 @@
-import { getCurrentProgress } from './utils';
+import { getCurrentProgress } from './calculateProgressUtil';
 import {
 	mockItems423,
 	mockItemsAllChecked,
