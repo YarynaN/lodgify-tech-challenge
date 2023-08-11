@@ -41,6 +41,7 @@ export const ExpandableList: React.FC<AccordionProps> = ({
 			onChange={handleChange}
 			disableGutters
 			elevation={0}
+			aria-expanded={expanded}
 			sx={{ backgroundColor: 'unset' }}
 		>
 			<AccordionSummary expandIcon={<LiaAngleDownSolid />} sx={accordionBorder}>

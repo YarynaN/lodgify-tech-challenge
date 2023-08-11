@@ -7,6 +7,10 @@ You can find that styles are `MUI (Material UI)` based with theme adjusted for m
 I have also added basic unit tests and UI tests for components and calculations.
 As for global state management I have used `React Context`.
 
+I have also added basic a11y (accessibility) support to the widget.
+It already voices change of state - updated progress percentage on task status change, navigation and state of change of elements.
+I believe it still can use some improvement especially in terms of cross-platform support, however, we all start somewhere. :)
+
 ## Available Scripts
 In the project directory, you can run:
 

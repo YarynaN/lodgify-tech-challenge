@@ -27,7 +27,12 @@ export const ItemWithCheckBox: React.FC<TaskProgressProps> = ({
 			<FormControlLabel
 				value="top"
 				control={
-					<Checkbox checked={done} onChange={handleChange} size="small" />
+					<Checkbox
+						checked={done}
+						onChange={handleChange}
+						aria-checked={done}
+						size="small"
+					/>
 				}
 				label={description}
 			/>

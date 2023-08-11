@@ -17,6 +17,7 @@ export const LinearProgress: React.FC<LinearProgressProps> = ({
 			marginRight={2}
 			marginLeft={2}
 			fontWeight="500"
+			aria-live="polite"
 		>
 			{`${completed}%`}
 		</Typography>
@@ -26,6 +27,7 @@ export const LinearProgress: React.FC<LinearProgressProps> = ({
 		<Box sx={baseLine}>
 			<Box
 				data-testid={'progressBar'}
+				aria-describedby={`Progress ${completed}%`}
 				sx={{ ...progressBar, width: `${completed}%` }}
 			>
 				{completed > PERCENT_DISPLAY_THRESHOLD &&
