@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Box, Checkbox, FormControlLabel } from '@mui/material';
 import { Task } from '../../models/CreateProfile/GroupedTasks';
+import { componentWrapper } from './styles';
 
 type TaskProgressProps = {
 	updateTask: (task: Task, value: boolean) => void;
@@ -22,15 +23,7 @@ export const ItemWithCheckBox: React.FC<TaskProgressProps> = ({
 	);
 
 	return (
-		<Box
-			sx={{
-				display: 'flex',
-				alignItems: 'center',
-				flexDirection: 'row',
-			}}
-			height="100%"
-			width="100vw"
-		>
+		<Box sx={componentWrapper} height="100%" width="100vw">
 			<FormControlLabel
 				value="top"
 				control={

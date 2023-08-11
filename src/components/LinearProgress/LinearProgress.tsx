@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import { baseLine, progressBar } from './styles';
 
 type LinearProgressProps = {
 	completed: number;
@@ -22,24 +23,10 @@ export const LinearProgress: React.FC<LinearProgressProps> = ({
 	);
 
 	return (
-		<Box
-			sx={{
-				height: '20px',
-				borderRadius: 4,
-				m: 2,
-				backgroundColor: '#f3fbfa',
-				display: 'flex',
-			}}
-		>
+		<Box sx={baseLine}>
 			<Box
 				data-testid={'progressBar'}
-				sx={{
-					height: '100%',
-					width: `${completed}%`,
-					borderRadius: 'inherit',
-					textAlign: 'right',
-					backgroundColor: 'primary.main',
-				}}
+				sx={{ ...progressBar, width: `${completed}%` }}
 			>
 				{completed > PERCENT_DISPLAY_THRESHOLD &&
 					createPercentageLabel('secondary.main')}

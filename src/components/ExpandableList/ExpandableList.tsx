@@ -14,6 +14,7 @@ import {
 	LiaAngleDownSolid,
 } from 'react-icons/lia';
 import { Group, Task } from '../../models/CreateProfile/GroupedTasks';
+import { accordionBorder, label, summaryWrapper, taskWrapper } from './styles';
 
 type AccordionProps = {
 	group: Group;
@@ -42,16 +43,8 @@ export const ExpandableList: React.FC<AccordionProps> = ({
 			elevation={0}
 			sx={{ backgroundColor: 'unset' }}
 		>
-			<AccordionSummary
-				expandIcon={<LiaAngleDownSolid />}
-				sx={{ py: 1, px: 2, border: 'none' }}
-			>
-				<Box
-					display="flex"
-					width="100%"
-					flexDirection="row"
-					alignItems="center"
-				>
+			<AccordionSummary expandIcon={<LiaAngleDownSolid />} sx={accordionBorder}>
+				<Box sx={summaryWrapper}>
 					{markDone ? (
 						<LiaClipboardCheckSolid
 							size={'20px'}
@@ -62,32 +55,17 @@ export const ExpandableList: React.FC<AccordionProps> = ({
 					)}
 					<Typography
 						sx={{ flex: 1, marginLeft: 2 }}
-						color={markDone ? 'primary.main' : 'grey'}
+						color={markDone ? 'primary.main' : 'text.primary'}
 					>
 						{name}
 					</Typography>
-					<Typography
-						sx={{
-							color: 'text.secondary',
-							justifySelf: 'flex-end',
-							marginRight: '12px',
-						}}
-						fontSize="medium"
-					>
+					<Typography sx={label} fontSize="medium">
 						{expanded ? 'Hide' : 'Show'}
 					</Typography>
 				</Box>
 			</AccordionSummary>
 			<AccordionDetails>
-				<Box
-					sx={{
-						display: 'flex',
-						flexDirection: 'column',
-						gap: 2,
-						ml: 2,
-						mt: 2,
-					}}
-				>
+				<Box sx={taskWrapper}>
 					{tasks.map((task, idx) => (
 						<ItemWithCheckBox
 							key={`${name}-${idx}`}

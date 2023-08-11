@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import { useProgressContext } from '../../context';
 import { ExpandableList, LinearProgress } from '../../components';
+import { cardPaper, cardWrapper, GroupSection } from './styles';
 
 const TaskProgressWidget = () => {
 	const {
@@ -37,17 +38,8 @@ const TaskProgressWidget = () => {
 	}
 
 	return (
-		<Box
-			sx={{
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				backgroundColor: '#f9f9f9',
-			}}
-			height="100vh"
-			width="100vw"
-		>
-			<Card sx={{ maxWidth: '800px', paddingTop: 2, borderRadius: 2 }}>
+		<Box sx={cardWrapper} height="100vh" width="100vw">
+			<Card sx={cardPaper}>
 				<CardContent>
 					<Typography variant="h1" fontSize="large" fontWeight="bold" m={2}>
 						Lodgify grouped task
@@ -55,12 +47,8 @@ const TaskProgressWidget = () => {
 					<LinearProgress completed={progress} />
 					<Box
 						sx={{
-							mt: 4,
-							borderRadius: 2,
+							...GroupSection,
 							border: `1px solid ${theme.palette.divider}`,
-							maxHeight: '400px',
-							overflowY: 'auto',
-							overflowX: 'hidden',
 						}}
 					>
 						{items.length > 0 &&
